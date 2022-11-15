@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "5f30c568-9572-4d67-9dc5-4d52f7f0ad63",
+		"name": "SpringBootWithCache",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24442917"
+	},
+	"item": [
+		{
+			"name": "List All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Book by ISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/655511424X",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"655511424X"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert a Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": null,\n\t\"isbn\": \"8535909559\",\n\t\"title\": \"A revolução dos bichos: Um conto de fadas\",\n\t\"edition\": \"Padrão-10/01/1997\",\n\t\"author\": \"George Orwell\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 4,\n\t\"isbn\": \"8535909559\",\n\t\"title\": \"A revolução dos bichos: Um conto de fadas\",\n\t\"edition\": \"Padrão-11/05/1997\",\n\t\"author\": \"George Orwell\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Book by ISBN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/8535909559",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"8535909559"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Student by Enrollment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/1013",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"1013"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert a Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": null,\n\t\"enrollment\": 1014,\n\t\"name\": \"João de Souza\",\n\t\"course\": \"Medicina\",\n\t\"period\": \"FULL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 4,\n\t\"enrollment\": 1014,\n\t\"name\": \"João da Silva Souza\",\n\t\"course\": \"Medicina\",\n\t\"period\": \"FULL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Student by Enrollment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/1014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"1014"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
